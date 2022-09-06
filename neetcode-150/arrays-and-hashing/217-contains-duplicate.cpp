@@ -2,9 +2,9 @@ class Solution {
 public:
     bool containsDuplicate(vector<int>& nums) {
         unordered_set<int> s;
-        for (const int& num : nums) {
-            if (s.find(num) != s.end()) return true;
-            s.insert(num);
+        for (auto e : nums) {
+            if (s.count(e)) return true;
+            s.insert(e);
         }
         return false;
     }
