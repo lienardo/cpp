@@ -3,12 +3,10 @@ public:
     bool isAnagram(string s, string t) {
         if (s.size() != t.size()) return false;
         vector<int> v(26);
-        for (const int& e : s) {
-            v[e - 'a']++;
-        }
-        for (const int& e : t) {
-            v[e - 'a']--;
-            if (v[e - 'a'] < 0) return false;
+        for (auto c : s) v[c - 'a']++;
+        for (auto c : t) {
+            v[c - 'a']--;
+            if (v[c - 'a'] < 0) return false;
         }
         return true;
     }
