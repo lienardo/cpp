@@ -2,8 +2,10 @@
 
 using namespace std;
 
+typedef long long ll;
+
 int main() {
-    long long n;
+    ll n;
     cin >> n;
     cout << n;
     while (n > 1) {
